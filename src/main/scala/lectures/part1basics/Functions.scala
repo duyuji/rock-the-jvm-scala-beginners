@@ -31,7 +31,7 @@ object Functions extends App {
   }
 
   /*
-    1.  A greeeting function (name, age) => "Hi, my name is $name and I am $age years old."
+    1.  A greeting function (name, age) => "Hi, my name is $name and I am $age years old."
     2.  Factorial function 1 * 2 * 3 * .. * n
     3.  A Fibonacci function
         f(1) = 1
@@ -39,4 +39,24 @@ object Functions extends App {
         f(n) = f(n - 1) + f(n - 2)
     4.  Tests if a number is prime
    */
+
+  def greeting(name: String, age: Int) = {
+    println(s"Hi, my name is $name and I am $age years old.")
+  }
+
+  println(greeting("Eduardo", 29))
+
+  def factorial(n: Int): Int = {
+    if (n == 1) n
+    else n * factorial(n - 1)
+  }
+
+  println(factorial(6))
+
+  def fibonacci(n: Int): Int = {
+    if (n < 2) n
+    else fibonacci(n - 1) + fibonacci(n - 2)
+  }
+
+  println(fibonacci(6))
 }
