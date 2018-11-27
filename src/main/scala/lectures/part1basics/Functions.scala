@@ -74,6 +74,6 @@ object Functions extends App {
     return testPrime(n, 2)
   }
 
-  val number: Int = 10
+  val number: Int = 998
   println(number + " is prime: " + primeNumber(number))
 }
