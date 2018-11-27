@@ -35,10 +35,12 @@ object Recursion extends App {
     3. Fibonacci function, tail recursive
    */
 
-  def concatString(n: Int, s: String): String = {
-    if (n > 1) s
-    else concatString(n - 1, s + s)
+  def concatString(n: Int, s: String, accumulator: String): String = {
+    if (n < 1) accumulator
+    else concatString(n - 1, s, accumulator + s)
   }
+
+  println(concatString(3, "hello",""))
 
   //my prime was previously recursive, in use the same
   def primeNumber(n: Int): Boolean = {
@@ -55,13 +57,16 @@ object Recursion extends App {
     return testPrime(n, 2)
   }
 
-  def fibonacci(n: Int): Int = {
-    def fibonacciHelper(n: Int, i: Int, accumulator1: Int, accumulator2: Int): Int =
+  println(primeNumber(7))
+  println(primeNumber(8))
+
+  def fibonacci(n: Int): BigInt = {
+    def fibonacciHelper(n: Int, i: Int, accumulator1: BigInt, accumulator2: BigInt): BigInt =
       if (n <= i) accumulator1 + accumulator2
       else fibonacciHelper(n, i + 1, accumulator2, accumulator1 + accumulator2)
 
     fibonacciHelper(n, 2,0, 1)
   }
 
-  println(fibonacci(6))
+  println(fibonacci(300))
 }
