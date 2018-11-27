@@ -59,4 +59,21 @@ object Functions extends App {
   }
 
   println(fibonacci(6))
+
+  def primeNumber(n: Int): Boolean = {
+    def testPrime(n: Int, i: Int): Boolean = {
+      if (i == n) {
+        return true
+      } else if (n % i == 0 && (i != 1 || i != n)) {
+        return false
+      } else {
+        return testPrime(n, i + 1)
+      }
+    }
+
+    return testPrime(n, 2)
+  }
+
+  val number: Int = 10
+  println(number + " is prime: " + primeNumber(number))
 }
