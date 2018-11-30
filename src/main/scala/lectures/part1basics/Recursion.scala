@@ -1,6 +1,7 @@
 package lectures.part1basics
 
 import scala.annotation.tailrec
+import scala.math.BigDecimal.RoundingMode
 
 object Recursion extends App {
 
@@ -68,5 +69,6 @@ object Recursion extends App {
     fibonacciHelper(n, 2,0, 1)
   }
 
-  println(fibonacci(300))
+  println(fibonacci(50000))
+
 }
