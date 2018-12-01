@@ -14,4 +14,6 @@ object StringOps extends App {
 
   val aNumberString = "45"
   val aNumber = aNumberString.toInt
+
+  println('a' +: aNumberString)
 }
