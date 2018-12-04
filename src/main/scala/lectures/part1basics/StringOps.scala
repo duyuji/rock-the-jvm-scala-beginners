@@ -34,4 +34,8 @@ object StringOps extends App {
   val myth = f"$name can eat $speed%2.2f burgers per minute"
   println(myth)
 
+  // raw-interpolator
+  println(raw"Thjs is a \n newline")
+  val escaped = "Thjs is a \n newline"
+  println(raw"$escaped")
 }
