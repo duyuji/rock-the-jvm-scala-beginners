@@ -12,8 +12,26 @@ object StringOps extends App {
   println(str.toLowerCase)
   println(str.length)
 
-  val aNumberString = "45"
+  val aNumberString = "2"
   val aNumber = aNumberString.toInt
 
-  println('a' +: aNumberString)
+  println('a' +: aNumberString :+ 'z')
+  println(str.reverse)
+  println(str.take(2))
+
+  // Scala-specific: String interpolators.
+
+  // S-interpolators
+
+  val name = "Eduardo"
+  val age = 28
+  val greeting = s"Hello, my name id $name and I am $age years old"
+  val anotherGreeting = s"Hello, my name is $name and I will be turning ${age + 1} years"
+  println(anotherGreeting)
+
+  // F-interpolators
+  val speed = 1.2f
+  val myth = f"$name can eat $speed%2.2f burgers per minute"
+  println(myth)
+
 }
