@@ -54,7 +54,7 @@ class Person(name: String, val age: Int) {
 
 class Writer(firstName: String, surname: String, val year: Int) {
 
-  def fullname() = {
+  def fullname(): String = {
     s"$firstName $surname"
   }
 
@@ -63,11 +63,11 @@ class Writer(firstName: String, surname: String, val year: Int) {
 class Novel(name: String, yearOfRelease: Int, author: Writer) {
 
   def authorAge = {
-    Year.now.getValue - author.year
+    yearOfRelease - author.year
   }
 
-  def isWrittenBy = {
-    author.fullname
+  def isWrittenBy(author: Writer) = {
+    this.author == author
   }
 
   def copy(newYearOfRelease: Int) = {
