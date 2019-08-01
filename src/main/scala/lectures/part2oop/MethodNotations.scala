@@ -10,7 +10,7 @@ object MethodNotations extends App {
     def apply(): String = s"Hi, my name is $name and I like $favoriteMovie"
 
     def +(nickname: String ) = new Person(s"$name ($nickname)", favoriteMovie)
-    def  unary_+ = new Person(name, favoriteMovie, age + 1)
+    def unary_+ = new Person(name, favoriteMovie, age + 1)
     def learns(something: String): String = s"$name learns $something"
     def learnsSacala: String = learns("Scala")
     def apply(quantity: Int):String = s"$name watched $favoriteMovie $quantity times"
